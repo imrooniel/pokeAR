@@ -70,9 +70,6 @@ namespace Vuforia
         {
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
-            Character c = GetComponentInChildren<Character>();
-            if (c != null)
-                c.ResetCharacter();
 
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
@@ -94,9 +91,7 @@ namespace Vuforia
         {
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
-            Character c = GetComponentInChildren<Character>();
-            if (c != null)
-                c.LostTarget();
+
             // Disable rendering:
             foreach (Renderer component in rendererComponents)
             {

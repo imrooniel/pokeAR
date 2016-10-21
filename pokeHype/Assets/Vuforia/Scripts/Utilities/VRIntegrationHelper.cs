@@ -113,11 +113,8 @@ public class VRIntegrationHelper : MonoBehaviour
     }
 
     // OnPreRender is called once per camera each frame
-   void OnPreRender()
+    void OnPreRender()
     {
-        mLeftCamera = DigitalEyewearBehaviour.Instance.PrimaryCamera;
-        mRightCamera = DigitalEyewearBehaviour.Instance.SecondaryCamera;
-
         // on pre render is where projection matrix and pixel rect are set up correctly (for each camera individually)
         // so we use this to acquire this data.
         if (IsLeft && !mLeftCameraDataAcquired)
